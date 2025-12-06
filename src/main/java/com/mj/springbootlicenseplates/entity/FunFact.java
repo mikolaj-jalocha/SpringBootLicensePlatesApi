@@ -8,6 +8,8 @@ import lombok.*;
 @Table(name = "fun_facts")
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class FunFact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

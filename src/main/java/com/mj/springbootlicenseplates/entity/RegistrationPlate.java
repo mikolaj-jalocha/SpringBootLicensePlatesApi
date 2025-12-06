@@ -9,6 +9,8 @@ import java.util.Set;
 @Table(name = "registration_plates")
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class RegistrationPlate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

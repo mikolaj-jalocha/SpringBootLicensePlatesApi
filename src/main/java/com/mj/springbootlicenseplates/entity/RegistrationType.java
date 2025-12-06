@@ -8,6 +8,8 @@ import lombok.*;
 @Table(name = "registration_types")
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class RegistrationType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

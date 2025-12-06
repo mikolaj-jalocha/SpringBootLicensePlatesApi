@@ -8,6 +8,8 @@ import java.time.Instant;
 @Table(name = "users_scores")
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class UserScore {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

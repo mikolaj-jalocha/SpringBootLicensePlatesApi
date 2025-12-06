@@ -7,6 +7,8 @@ import lombok.*;
 @Table(name = "voivodeships")
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Voivodeship {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

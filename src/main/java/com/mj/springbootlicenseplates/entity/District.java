@@ -17,7 +17,7 @@ public class District {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "voivodeship_id")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

@@ -19,13 +19,13 @@ public class RegistrationPlate {
 
     private String code;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "district_id")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private District district;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "type_id")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

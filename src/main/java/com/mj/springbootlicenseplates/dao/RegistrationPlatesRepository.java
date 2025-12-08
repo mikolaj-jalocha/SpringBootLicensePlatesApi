@@ -1,7 +1,6 @@
 package com.mj.springbootlicenseplates.dao;
 
 import com.mj.springbootlicenseplates.entity.RegistrationPlate;
-import com.mj.springbootlicenseplates.entity.Voivodeship;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface RegistrationPlatesRepository extends JpaRepository<Voivodeship, Long> {
+public interface RegistrationPlatesRepository extends JpaRepository<RegistrationPlate, Long> {
     @Query(value = "SELECT * FROM registration_plates", nativeQuery = true)
     List<RegistrationPlate> getAllLicensePlates();
 

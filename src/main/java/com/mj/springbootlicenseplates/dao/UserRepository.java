@@ -20,4 +20,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "SELECT EXISTS(SELECT 1 FROM users WHERE name = :name)", nativeQuery = true)
     boolean existsByNameNative(@Param("name") String name);
 
+    @Query(value = "SELECT EXISTS(SELECT 1 FROM users WHERE user_id = :id)", nativeQuery = true)
+    boolean existByIdNative(@Param("id") Long id);
+
 }

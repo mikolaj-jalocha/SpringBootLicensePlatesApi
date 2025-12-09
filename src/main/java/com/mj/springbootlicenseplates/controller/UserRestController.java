@@ -33,7 +33,8 @@ public class UserRestController {
     @Operation(summary = "Create a new user", description = "Adds a new user to the system with the provided name.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "User created successfully"),
-            @ApiResponse(responseCode = "400", description = "Invalid input data")
+            @ApiResponse(responseCode = "400", description = "Invalid input data"),
+            @ApiResponse(responseCode = "409", description = "User with this name already exists")
     })
     public User addUser(
             @RequestBody

@@ -6,6 +6,7 @@ import com.mj.springbootlicenseplates.dto.request.UserDto;
 import com.mj.springbootlicenseplates.dto.request.UserScoreDto;
 import com.mj.springbootlicenseplates.dto.response.LeaderboardResponse;
 import com.mj.springbootlicenseplates.entity.User;
+import com.mj.springbootlicenseplates.exception.UserAlreadyExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User addUser(UserDto userDto) {
         if (userRepository.existsByNameNative(userDto.getName()))
-            return null;
+            throw new UserAlreadyExistsException("User with name '" + userDto.getName() + "' already exists");
         userRepository.insertUserNative(userDto.getName());
         return userRepository.getUserNative(userDto.getName());
     }

@@ -2,11 +2,14 @@ package com.mj.springbootlicenseplates.service;
 
 import com.mj.springbootlicenseplates.dao.UserRepository;
 import com.mj.springbootlicenseplates.dao.UserScoreRepository;
-import com.mj.springbootlicenseplates.dto.UserDto;
-import com.mj.springbootlicenseplates.dto.UserScoreDto;
+import com.mj.springbootlicenseplates.dto.request.UserDto;
+import com.mj.springbootlicenseplates.dto.request.UserScoreDto;
+import com.mj.springbootlicenseplates.dto.response.LeaderboardResponse;
 import com.mj.springbootlicenseplates.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -35,4 +38,8 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public List<LeaderboardResponse> getLeaderboard() {
+        return userScoreRepository.getLeaderboardNative();
+    }
 }

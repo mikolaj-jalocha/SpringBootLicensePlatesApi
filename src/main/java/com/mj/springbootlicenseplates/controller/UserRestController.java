@@ -1,9 +1,9 @@
 package com.mj.springbootlicenseplates.controller;
 
-import com.mj.springbootlicenseplates.dto.UserDto;
-import com.mj.springbootlicenseplates.dto.UserScoreDto;
+import com.mj.springbootlicenseplates.dto.request.UserDto;
+import com.mj.springbootlicenseplates.dto.request.UserScoreDto;
+import com.mj.springbootlicenseplates.dto.response.LeaderboardResponse;
 import com.mj.springbootlicenseplates.entity.User;
-import com.mj.springbootlicenseplates.entity.UserScore;
 import com.mj.springbootlicenseplates.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -14,9 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/users")
-@Tag(name = "Users Rest API Endpoints", description = "Operations related to users.")
+@Tag(name = "Users and Games Rest API Endpoints", description = "Operations related to users and quiz.")
 public class UserRestController {
 
     private final UserService userService;
@@ -44,16 +46,19 @@ public class UserRestController {
     @PostMapping("/scores")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Record user quiz score", description = "Records a user's quiz score with start and end times.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "User score recorded successfully"),
-            @ApiResponse(responseCode = "400", description = "Invalid input data")
-    })
     public void addUserScore(
             @RequestBody
             @Valid
             UserScoreDto userScoreDto
     ) {
         userService.addUserScore(userScoreDto);
+    }
+
+    @GetMapping("/scores")
+    @Operation(summary = "Get leaderboard", description = "Returns the leaderboard ordered by score descending.")
+    @ResponseStatus(HttpStatus.OK)
+    public List<LeaderboardResponse> getLeaderboard() {
+        return userService.getLeaderboard();
     }
 
 }

@@ -1,5 +1,6 @@
 package com.mj.springbootlicenseplates.dao;
 
+import com.mj.springbootlicenseplates.dto.response.LeaderboardResponse;
 import com.mj.springbootlicenseplates.entity.UserScore;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -8,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
+import java.util.List;
 
 public interface UserScoreRepository extends JpaRepository<UserScore, Long> {
 
@@ -24,4 +26,17 @@ public interface UserScoreRepository extends JpaRepository<UserScore, Long> {
             @Param("quizStart") Instant quizStart,
             @Param("quizEnd") Instant quizEnd
     );
+
+    @Query(
+            value = "SELECT " +
+                    "  ROW_NUMBER() OVER (ORDER BY COALESCE(MAX(us.score), 0) DESC) AS position, " +
+                    "  u.name AS userName, " +
+                    "  COALESCE(MAX(us.score), 0) AS totalScore " +
+                    "FROM users u " +
+                    "LEFT JOIN users_scores us ON u.user_id = us.user_id " +
+                    "GROUP BY u.user_id, u.name " +
+                    "ORDER BY totalScore DESC",
+            nativeQuery = true
+    )
+    List<LeaderboardResponse> getLeaderboardNative();
 }

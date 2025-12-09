@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class VoivodeshipServiceImpl implements VoivodeshipService{
+public class VoivodeshipServiceImpl implements VoivodeshipService {
 
     private final VoivodeshipRepository voivodeshipRepository;
 
@@ -20,6 +20,6 @@ public class VoivodeshipServiceImpl implements VoivodeshipService{
     @Override
     public List<Voivodeship> getAll() {
         // return voivodeshipRepository.findAll();
-        return voivodeshipRepository.getAllVoivodeships();
+        return voivodeshipRepository.getAllVoivodeshipsNative();
     }
 }

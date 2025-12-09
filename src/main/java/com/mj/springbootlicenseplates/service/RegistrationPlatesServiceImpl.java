@@ -19,21 +19,21 @@ public class RegistrationPlatesServiceImpl implements RegistrationPlateService {
 
     @Override
     public List<RegistrationPlate> getAll() {
-        return service.getAllLicensePlates();
+        return service.getAllLicensePlatesNative();
     }
 
     @Override
     public RegistrationPlate getSingleRegistrationPlateByCode(String code) {
-        return service.getSingleRegistrationPlateByCode(code);
+        return service.getRegistrationPlateByCodeNative(code);
     }
 
     @Override
     public List<RegistrationPlate> getRegistrationPlatesWithParams(String voivodeship, String district, String type) {
-        return service.getRegistrationPlatesWithParams(voivodeship, district, type);
+        return service.getRegistrationPlatesNative(voivodeship, district, type);
     }
 
     @Override
     public void incrementRegistrationPlateViews(String code) {
-        service.incrementRegistrationPlateViews(code);
+        service.incrementRegistrationPlateViewsNative(code);
     }
 }

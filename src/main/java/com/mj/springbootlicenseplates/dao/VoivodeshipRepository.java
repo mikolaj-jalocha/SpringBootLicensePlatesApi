@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface VoivodeshipRepository extends JpaRepository<Voivodeship, Long> {
     @Query(value = "SELECT * FROM voivodeships", nativeQuery = true)
-    List<Voivodeship> getAllVoivodeships();
+    List<Voivodeship> getAllVoivodeshipsNative();
 }
 

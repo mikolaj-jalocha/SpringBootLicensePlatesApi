@@ -1,7 +1,10 @@
 package com.mj.springbootlicenseplates.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.Set;
 
 
 @Entity
@@ -20,6 +23,12 @@ public class FunFact {
 
     @Column(name = "image_url")
     private String imageUrl;
+
+    @ManyToMany(mappedBy = "funFacts")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @JsonIgnore
+    private Set<RegistrationPlate> registrationPlates;
 
     private String source;
 }

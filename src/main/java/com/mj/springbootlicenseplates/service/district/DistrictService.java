@@ -1,4 +1,4 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.district;
 
 import com.mj.springbootlicenseplates.entity.District;
 

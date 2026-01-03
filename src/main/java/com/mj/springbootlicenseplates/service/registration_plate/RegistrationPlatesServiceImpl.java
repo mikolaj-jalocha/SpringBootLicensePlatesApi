@@ -34,6 +34,6 @@ public class RegistrationPlatesServiceImpl implements RegistrationPlateService {
 
     @Override
     public List<RegistrationPlate> getRegistrationPlatesContaining(String code) {
-        return repository.getRegistrationPlatesContaining(code);
+        return repository.getRegistrationPlatesContainingNative(code);
     }
 }

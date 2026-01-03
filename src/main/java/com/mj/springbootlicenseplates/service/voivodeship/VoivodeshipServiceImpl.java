@@ -1,4 +1,4 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.voivodeship;
 
 import com.mj.springbootlicenseplates.dao.VoivodeshipRepository;
 import com.mj.springbootlicenseplates.entity.Voivodeship;

@@ -1,4 +1,4 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.user;
 
 import com.mj.springbootlicenseplates.dto.request.UserDto;
 import com.mj.springbootlicenseplates.dto.request.UserScoreDto;

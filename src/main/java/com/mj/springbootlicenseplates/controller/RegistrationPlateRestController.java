@@ -1,7 +1,7 @@
 package com.mj.springbootlicenseplates.controller;
 
 import com.mj.springbootlicenseplates.entity.RegistrationPlate;
-import com.mj.springbootlicenseplates.service.RegistrationPlateService;
+import com.mj.springbootlicenseplates.service.registration_plate.RegistrationPlateService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

@@ -1,4 +1,4 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.registration_plate;
 
 import com.mj.springbootlicenseplates.dao.RegistrationPlatesRepository;
 import com.mj.springbootlicenseplates.entity.RegistrationPlate;
@@ -15,11 +15,6 @@ public class RegistrationPlatesServiceImpl implements RegistrationPlateService {
     @Autowired
     public RegistrationPlatesServiceImpl(RegistrationPlatesRepository registrationPlatesRepository) {
         this.repository = registrationPlatesRepository;
-    }
-
-    @Override
-    public List<RegistrationPlate> getAll() {
-        return repository.getAllLicensePlatesNative();
     }
 
     @Override

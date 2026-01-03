@@ -1,4 +1,4 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.quiz;
 
 import com.mj.springbootlicenseplates.dto.response.QuizResponse;
 

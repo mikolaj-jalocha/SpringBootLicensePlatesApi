@@ -1,11 +1,10 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.registration_plate;
 
 import com.mj.springbootlicenseplates.entity.RegistrationPlate;
 
 import java.util.List;
 
 public interface RegistrationPlateService {
-    List<RegistrationPlate> getAll();
 
     RegistrationPlate getSingleRegistrationPlateByCode(String code);
 

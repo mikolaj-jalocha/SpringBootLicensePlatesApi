@@ -1,4 +1,4 @@
-package com.mj.springbootlicenseplates.service;
+package com.mj.springbootlicenseplates.service.user;
 
 import com.mj.springbootlicenseplates.dao.UserRepository;
 import com.mj.springbootlicenseplates.dao.UserScoreRepository;

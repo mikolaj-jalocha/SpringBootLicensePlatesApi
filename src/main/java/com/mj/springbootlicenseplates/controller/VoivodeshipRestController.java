@@ -1,7 +1,7 @@
 package com.mj.springbootlicenseplates.controller;
 
 import com.mj.springbootlicenseplates.entity.Voivodeship;
-import com.mj.springbootlicenseplates.service.VoivodeshipService;
+import com.mj.springbootlicenseplates.service.voivodeship.VoivodeshipService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -2,7 +2,7 @@ package com.mj.springbootlicenseplates.controller;
 
 
 import com.mj.springbootlicenseplates.entity.District;
-import com.mj.springbootlicenseplates.service.DistrictService;
+import com.mj.springbootlicenseplates.service.district.DistrictService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

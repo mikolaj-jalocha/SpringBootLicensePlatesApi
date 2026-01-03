@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface RegistrationPlatesRepository extends JpaRepository<RegistrationPlate, Long> {
-    @Query(value = "SELECT * FROM registration_plates", nativeQuery = true)
-    List<RegistrationPlate> getAllLicensePlatesNative();
 
     @Query(value = "SELECT * FROM registration_plates WHERE LOWER(code) = LOWER(:code)", nativeQuery = true)
     RegistrationPlate getRegistrationPlateByCodeNative(@Param("code") String code);
@@ -34,8 +32,8 @@ public interface RegistrationPlatesRepository extends JpaRepository<Registration
     @Modifying
     @Transactional
     @Query(value = """
-            UPDATE registration_plates 
-            SET number_of_views = number_of_views + 1 
+            UPDATE registration_plates
+            SET number_of_views = number_of_views + 1
             WHERE code = :code
             """, nativeQuery = true)
     void incrementRegistrationPlateViewsNative(@Param("code") String code);
@@ -44,7 +42,7 @@ public interface RegistrationPlatesRepository extends JpaRepository<Registration
             value = "SELECT * FROM registration_plates WHERE LOWER(code) LIKE CONCAT('%', LOWER(:sequence), '%')",
             nativeQuery = true
     )
-    List<RegistrationPlate> getRegistrationPlatesContaining(@Param("sequence") String sequence);
+    List<RegistrationPlate> getRegistrationPlatesContainingNative(@Param("sequence") String sequence);
 
 }
 

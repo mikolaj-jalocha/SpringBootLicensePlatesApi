@@ -19,7 +19,6 @@ public class VoivodeshipServiceImpl implements VoivodeshipService {
 
     @Override
     public List<Voivodeship> getAll() {
-        // return voivodeshipRepository.findAll();
         return voivodeshipRepository.getAllVoivodeshipsNative();
     }
 }

@@ -10,30 +10,35 @@ import java.util.List;
 @Service
 public class RegistrationPlatesServiceImpl implements RegistrationPlateService {
 
-    private final RegistrationPlatesRepository service;
+    private final RegistrationPlatesRepository repository;
 
     @Autowired
     public RegistrationPlatesServiceImpl(RegistrationPlatesRepository registrationPlatesRepository) {
-        this.service = registrationPlatesRepository;
+        this.repository = registrationPlatesRepository;
     }
 
     @Override
     public List<RegistrationPlate> getAll() {
-        return service.getAllLicensePlatesNative();
+        return repository.getAllLicensePlatesNative();
     }
 
     @Override
     public RegistrationPlate getSingleRegistrationPlateByCode(String code) {
-        return service.getRegistrationPlateByCodeNative(code);
+        return repository.getRegistrationPlateByCodeNative(code);
     }
 
     @Override
     public List<RegistrationPlate> getRegistrationPlatesWithParams(String voivodeship, String district, String type) {
-        return service.getRegistrationPlatesNative(voivodeship, district, type);
+        return repository.getRegistrationPlatesNative(voivodeship, district, type);
     }
 
     @Override
     public void incrementRegistrationPlateViews(String code) {
-        service.incrementRegistrationPlateViewsNative(code);
+        repository.incrementRegistrationPlateViewsNative(code);
+    }
+
+    @Override
+    public List<RegistrationPlate> getRegistrationPlatesContaining(String code) {
+        return repository.getRegistrationPlatesContaining(code);
     }
 }

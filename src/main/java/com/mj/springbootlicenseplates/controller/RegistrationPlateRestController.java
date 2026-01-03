@@ -94,4 +94,24 @@ public class RegistrationPlateRestController {
     ) {
         return registrationPlateService.getRegistrationPlatesWithParams(voivodeship, district, type);
     }
+
+    @Operation(
+            summary = "Search plates containing sequence",
+            description = "Returns registration plates whose code contains the provided character sequence (case-insensitive)."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "List of matching registration plates", content = @Content(mediaType = "application/json", schema = @Schema(implementation = RegistrationPlate.class))),
+            @ApiResponse(responseCode = "400", description = "Invalid sequence", content = @Content)
+    })
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping("/contains/{code}")
+    public List<RegistrationPlate> getPlatesContainingSequence(
+            @Parameter(description = "Sequence to search for in plate codes", required = true, example = "WA")
+            @PathVariable("code")
+            @Size(min = 1, message = "Sequence must not be empty")
+            String code
+    ) {
+        return registrationPlateService.getRegistrationPlatesContaining(code);
+    }
+
 }

@@ -39,5 +39,12 @@ public interface RegistrationPlatesRepository extends JpaRepository<Registration
             WHERE code = :code
             """, nativeQuery = true)
     void incrementRegistrationPlateViewsNative(@Param("code") String code);
+
+    @Query(
+            value = "SELECT * FROM registration_plates WHERE LOWER(code) LIKE CONCAT('%', LOWER(:sequence), '%')",
+            nativeQuery = true
+    )
+    List<RegistrationPlate> getRegistrationPlatesContaining(@Param("sequence") String sequence);
+
 }
 

@@ -18,7 +18,7 @@ public class DistrictServiceImpl implements DistrictService {
     }
 
     @Override
-    public List<District> getAll() {
-        return districtRepository.findAll();
+    public List<District> getAll(String voivodeship) {
+        return districtRepository.getAllDistrictsNative(voivodeship);
     }
 }

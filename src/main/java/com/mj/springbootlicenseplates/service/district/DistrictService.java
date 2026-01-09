@@ -5,5 +5,5 @@ import com.mj.springbootlicenseplates.entity.District;
 import java.util.List;
 
 public interface DistrictService {
-    List<District> getAll();
+    List<District> getAll(String voivodeship);
 }

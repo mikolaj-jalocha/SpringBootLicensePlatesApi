@@ -299,68 +299,64 @@ VALUES ('TSZ', 130, 1, 0);
 
 -- 14. Warmińsko-mazurskie (ID 131-140)
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NO', 131, 1, 0); -- Olsztyn
+VALUES ('NO', 150, 1, 0); -- Olsztyn
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NMR', 132, 1, 0); -- pow. mrągowski
+VALUES ('NMR', 152, 1, 0); -- pow. mrągowski
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NE', 133, 1, 0); -- Elbląg
+VALUES ('NE', 151, 1, 0); -- Elbląg
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NOL', 134, 1, 0); -- pow. olsztyński
+VALUES ('NOL', 153, 1, 0); -- pow. olsztyński
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NOS', 135, 1, 0); -- pow. ostródzki
+VALUES ('NOS', 154, 1, 0); -- pow. ostródzki
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NIL', 136, 1, 0); -- pow. iławski
+VALUES ('NIL', 155, 1, 0); -- pow. iławski
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NEL', 137, 1, 0); -- pow. ełcki
+VALUES ('NEL', 156, 1, 0); -- pow. ełcki
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NGI', 138, 1, 0); -- pow. giżycki
+VALUES ('NGI', 157, 1, 0); -- pow. giżycki
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NKE', 139, 1, 0); -- pow. kętrzyński
+VALUES ('NKE', 160, 1, 0); -- pow. kętrzyński
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('NSZ', 140, 1, 0);
 -- pow. szczycieński
 
 -- 15. Wielkopolskie (ID 141-150)
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PO', 141, 1, 0); -- Poznań
+VALUES ('PO', 161, 1, 0); -- Poznań
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PGN', 142, 1, 0); -- pow. gnieźnieński
+VALUES ('PGN', 165, 1, 0); -- pow. gnieźnieński
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PK', 143, 1, 0); -- Kalisz
+VALUES ('PK', 162, 1, 0); -- Kalisz
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PN', 144, 1, 0); -- Konin
+VALUES ('PN', 163, 1, 0); -- Konin
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PL', 145, 1, 0); -- Leszno
+VALUES ('PL', 164, 1, 0); -- Leszno
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PZ', 146, 1, 0); -- pow. poznański
+VALUES ('PZ', 166, 1, 0); -- pow. poznański
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PP', 147, 1, 0); -- pow. pilski
+VALUES ('PP', 167, 1, 0); -- pow. pilski
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('POS', 148, 1, 0); -- pow. ostrowski
+VALUES ('POS', 168, 1, 0); -- pow. ostrowski
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PKN', 149, 1, 0); -- pow. koniński
+VALUES ('PKN', 169, 1, 0); -- pow. koniński
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('PTU', 150, 1, 0);
+VALUES ('PTU', 170, 1, 0);
 -- pow. turecki
 
 -- 16. Zachodniopomorskie (ID 151-160)
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZS', 151, 1, 0); -- Szczecin
+VALUES ('ZS', 173, 1, 0); -- Szczecin
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZKL', 152, 1, 0); -- pow. kołobrzeski
+VALUES ('ZKL', 176, 1, 0); -- pow. kołobrzeski
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZK', 153, 1, 0); -- Koszalin
+VALUES ('ZK', 174, 1, 0); -- Koszalin
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZSW', 154, 1, 0); -- Świnoujście
+VALUES ('ZSW', 175, 1, 0); -- Świnoujście
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZST', 155, 1, 0); -- pow. stargardzki
+VALUES ('ZST', 177, 1, 0); -- pow. stargardzki
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZGR', 156, 1, 0); -- pow. gryfiński
+VALUES ('ZGR', 178, 1, 0); -- pow. gryfiński
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZPL', 157, 1, 0); -- pow. policki
+VALUES ('ZPL', 179, 1, 0); -- pow. policki
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZSZ', 158, 1, 0); -- pow. szczecinecki
+VALUES ('ZSZ', 181, 1, 0); -- pow. szczecinecki
 INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZWA', 159, 1, 0); -- pow. wałecki
-INSERT INTO registration_plates (code, district_id, type_id, number_of_views)
-VALUES ('ZMY', 160, 1, 0); -- pow. myśliborski

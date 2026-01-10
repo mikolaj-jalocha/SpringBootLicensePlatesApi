@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class QuizResponse {
-    private String code;
-    private String voivodeship;
     private String district;
+    private String voivodeship;
+    private String code;
 }

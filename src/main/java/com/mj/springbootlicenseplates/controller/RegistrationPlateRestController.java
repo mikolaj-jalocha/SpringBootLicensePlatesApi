@@ -82,13 +82,13 @@ public class RegistrationPlateRestController {
     @ResponseStatus(HttpStatus.OK)
     @GetMapping()
     public List<RegistrationPlate> getRegistrationPlateWithParams(
-            @Parameter(description = "Filter by Polish voivodeship (province) name", example = "Mazowieckie")
+            @Parameter(description = "Filter by Polish voivodeship (province) name", example = "dolnośląskie")
             @RequestParam(required = false)
             String voivodeship,
-            @Parameter(description = "Filter by district name within a voivodeship", example = "Warsaw")
+            @Parameter(description = "Filter by district name within a voivodeship", example = "Wrocław")
             @RequestParam(required = false)
             String district,
-            @Parameter(description = "Filter by registration plate type (e.g., standard, commercial, diplomatic)", example = "standard")
+            @Parameter(description = "Filter by registration plate type (e.g., zwyczajna, indywidualna, dyplomatyczna, instytucyjna)", example = "zwyczajna")
             @RequestParam(required = false)
             String type
     ) {
